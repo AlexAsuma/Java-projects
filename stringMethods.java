@@ -1,6 +1,6 @@
 public class stringMethods {
     public static void main(String[] args) {
-        String name = "Alex Asuma";
+        //String name = "Alex Asuma";
 
         // int length = name.length();
         // char letter = name.charAt(0);
