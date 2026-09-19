@@ -8,7 +8,7 @@ public class simpleCalculator {
         char operator;
         double result = 0;
         boolean validOperation = true;
-
+while(validOperation){
         System.out.println("***********************************************");
         System.out.println("******WELCOME TO THE CALCULATOR PROGRAM********");
         System.out.println("***********************************************");
@@ -50,6 +50,6 @@ public class simpleCalculator {
         System.out.println("***********************************************");
 
         scanner.close();
-    }
+    }}
 
 }
