@@ -1,4 +1,6 @@
-public class Student{
+package OOP;
+
+public class Student {
     String name;
     int age;
     double gpa;
@@ -8,10 +10,10 @@ public class Student{
         this.name = name;
         this.age = age;
         this.gpa = gpa;
-        
+        this.isEnrolled = true;
     }
+void study(){
+    System.out.println(this.name + " Is Studying");
 
-
-
-    
+}
 }
