@@ -1,0 +1,16 @@
+//Enum in java is as data type that contains fixed set of constants.
+lass enumexample{
+    public enum Season{WINTERS, SPRING, SUMMER, FALL}
+
+    public static void main(String[] args){
+        for(Season s: Season.values())
+            System.out.println(s);
+    }
+}
+
+
+//OUTPUT: 
+//WINTER
+//SPRING
+//SUMMER
+//FALL
