@@ -4,8 +4,12 @@ public class Main {
     public static void main(String args[]){
         Dog dog = new Dog();
         Cat cat = new Cat();
+        Plant plant = new Plant();
+        Animal animal = new Animal();
 
-        dog.eat();
+        System.out.println(cat.isAlive);
+        plant.photosynthesize();
+
 
     }
     
