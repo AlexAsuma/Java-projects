@@ -8,4 +8,8 @@ public class Person {
         this.first = first;
         this.last = last;
     }
+
+    void showName(){
+        System.out.println(this.first + " " + this.last);
+    }
 }
