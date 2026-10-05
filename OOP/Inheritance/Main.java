@@ -10,6 +10,8 @@ public class Main {
         System.out.println(cat.isAlive);
         plant.photosynthesize();
 
+        System.out.println(cat.lives);
+
 
     }
     
