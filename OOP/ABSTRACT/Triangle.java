@@ -16,14 +16,13 @@ public class Triangle extends Shape {
         this.hypotenuse = hypotenuse;
     }
 
-
     @Override
-    double area(){
+    double area() {
         return 0.5 * base * height;
     }
 
     @Override
-    double perimeter(){
-        return base+hypotenuse+height;
+    double perimeter() {
+        return base + hypotenuse + height;
     }
 }

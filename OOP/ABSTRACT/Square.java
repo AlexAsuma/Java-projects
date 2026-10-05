@@ -1,16 +1,19 @@
 package OOP.ABSTRACT;
 
-public class Square extends Shape{
+public class Square extends Shape {
     double side;
-    public Square(double side){
+
+    public Square(double side) {
         this.side = side;
     }
+
     @Override
-    double perimeter(){
-        return side *4;
+    double perimeter() {
+        return side * 4;
     }
+
     @Override
-    double area(){
-        return Math.pow(side,2);
+    double area() {
+        return Math.pow(side, 2);
     }
 }

@@ -3,6 +3,7 @@ package OOP.ABSTRACT;
 public class Circle extends Shape {
 
     double radius;
+
     public Circle(double radius) {
         this.radius = radius;
     }
@@ -14,8 +15,7 @@ public class Circle extends Shape {
 
     @Override
     double perimeter() {
-        return Math.PI * (radius*2) ;
+        return Math.PI * (radius * 2);
     }
-
 
 }
