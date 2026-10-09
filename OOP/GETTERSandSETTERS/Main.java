@@ -8,7 +8,7 @@ public class Main {
         Car car = new Car("Toyota", "Black", 50000);
 
         car.setColor("Pink");
-        car.setPrice(20000);
+        car.setPrice(20000 );
         System.out.println(car.toString());
 
     }

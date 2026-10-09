@@ -1,7 +1,7 @@
 package OOP.GETTERSandSETTERS;
 
 public class Car {
-    private String make;
+    private final String make;
     private String color;
     private int price;
 
