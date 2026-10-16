@@ -19,5 +19,10 @@ public class simpleGUI {
 // label
         JLabel label = new JLabel("Hello!");
         label.setBounds(20, 60, 250, 25);
+
+        // Add components to the frame
+        frame.add(textField);
+        frame.add(button);
+        frame.add(label);
     }
 }
