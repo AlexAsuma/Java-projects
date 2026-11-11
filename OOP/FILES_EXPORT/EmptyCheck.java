@@ -1,4 +1,4 @@
-package OOP.STUDENT;
+package OOP.FILES_EXPORT;
 
 public class EmptyCheck {
     String input;

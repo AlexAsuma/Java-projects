@@ -1,4 +1,4 @@
-package OOP.STUDENT;
+package OOP.FILES_EXPORT;
 import java.util.Scanner;
 
 
@@ -87,6 +87,16 @@ public class Main{
         for(Students student : students){
             student.displayDetails();
             System.out.println("\n==================================================");
+
+        }
+        System.out.print("\nDo you want to export student records to a file? (yes/no): ");
+        String exportChoice = scanner.nextLine().trim().toLowerCase();
+
+        if (exportChoice.equals("yes") || exportChoice.equals("y")) {
+            FileExport.exportToTextFile(students, "student_records.txt");
+            FileExport.exportToCSV(students, "student_records.csv");
+        } else {
+            System.out.println("Export skipped.");
         }
 
         scanner.close();
