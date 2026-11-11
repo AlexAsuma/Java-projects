@@ -1,42 +1,57 @@
 package OOP.STUDENT;
 import java.util.Scanner;
-import java.io.Console;
+
 
 public class Main{
     static public void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        String name, regNO, course;
-        int marks = 0;
-        char grade;
 
-        System.out.println("Enter the name of the student: ");
-        name = scanner.nextLine();
-
-        System.out.println("Enter the regNo of the student(no spaces): ");
-        regNO = scanner.next();
-
+        System.out.print("How many students do you wanna log in the system?: ");
+        int studentNo = scanner.nextInt();
         scanner.nextLine();
 
-        System.out.println("Enter the course that the student is doing: ");
-        course = scanner.nextLine();
+        Students[] students = new Students[studentNo];
 
-        System.out.print("Enter the Marks of the student: ");
-        int tempMarks = scanner.nextInt();
+        for(int i = 0; i < students.length; i++){
+            System.out.println("\n********** Student " + (i + 1) + "************");
 
-        MarksCheck marksCheck = new MarksCheck(tempMarks);
-        boolean isValid = marksCheck.isValid;
-        if(isValid){
-            marks = tempMarks;
+            System.out.print("Enter the name of the student: ");
+            String name = scanner.nextLine();
+
+            System.out.print("Enter the regNo of the student(no spaces): ");
+            String regNO = scanner.next();
+            scanner.nextLine();
+
+            System.out.print("Enter the course that the student is doing: ");
+            String course = scanner.nextLine();
+
+            int marks = 0;
+            while(true){
+                System.out.print("Enter the Marks of the student: ");
+                int tempMarks = scanner.nextInt();
+                scanner.nextLine();
+
+                MarksCheck marksCheck = new MarksCheck(tempMarks);
+                if(marksCheck.isValid){
+                    marks = tempMarks;
+                    break;
+                }
+                else{
+                    System.out.println("The marks you've entered is invalid, Please try again\n(marks = 0-100)");
+
+                }
+
+            }
+
+            students[i] = new Students(name, regNO, course, marks);
+
         }
-        else{
-            System.out.println("The marks you've entered is invalid, Please try again\n(marks = 0-100)");
-
+        System.out.println("\n**************** STUDENTS RECORDS *****************");
+        for(Students student : students){
+            student.displayDetails();
+            System.out.println("\n==================================================");
         }
-        CalcGrade calcGrade = new CalcGrade(marks);
-        System.out.println(name + " " + regNO + " " + course + " " + marks + " " + calcGrade.grade);
-
-
 
         scanner.close();
     }

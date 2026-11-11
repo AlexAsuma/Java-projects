@@ -9,7 +9,7 @@ public class MarksCheck {
 
     }
     int CheckMarks(int marks){
-        if(marks > 0 && marks <= 100){
+        if(marks >= 0 && marks <= 100){
             isValid = true;
             return 1;
         }

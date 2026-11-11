@@ -5,12 +5,11 @@ int marks;
 char grade;
     public CalcGrade(int marks){
         this.marks = marks;
-       this.grade = GradeCalculation();
+        this.grade = GradeCalculation();
     }
 
     public char GradeCalculation(){
         if (marks >= 70 && marks <= 100) {
-
             return 'A';
         } else if (marks < 70 && marks >= 60) {
             return 'B';

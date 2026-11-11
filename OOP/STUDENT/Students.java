@@ -15,6 +15,10 @@ public class Students {
         this.grade = calcGrade.grade;
 
     }
+    public void displayDetails(){
+        System.out.printf(" Name = %s\n Registration Number = %s\n Course name = %s\n" +
+                " Marks = %d\n Grade = %c", name, regNO, course, marks, grade);
+    }
 
 
 
