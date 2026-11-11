@@ -19,9 +19,21 @@ public class Main{
             System.out.print("Enter the name of the student: ");
             String name = scanner.nextLine();
 
-            System.out.print("Enter the regNo of the student(no spaces): ");
-            String regNO = scanner.next();
-            scanner.nextLine();
+            String regNO = "";
+            while (true) {
+                System.out.print("Enter the regNo of the student(no spaces): ");
+                String tempRegNO = scanner.next();
+                scanner.nextLine();
+
+                RegNoCheck regCheck = new RegNoCheck(tempRegNO);
+                if(regCheck.isValid){
+                    regNO = tempRegNO;
+                    break;
+                }else{
+                    System.out.println("INVALID FORMAT!! Use format: CODE/NUMBER/YEAR (eg., S13/12345/24)");
+                }
+            }
+
 
             System.out.print("Enter the course that the student is doing: ");
             String course = scanner.nextLine();
