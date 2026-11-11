@@ -1,15 +1,21 @@
 package OOP.STUDENT;
 
 public class Students {
-    String name, regNo, courseName;
-    int Marks;
-    calcGrade grade = new calcGrade();
+    String name, regNO, course;
+    int marks;
+    char grade;
 
-    Students(String name, String regNo, String courseName, int Marks){
-            this.name = name;
-            this.regNo = regNo;
-            this.courseName = courseName;
-            this.Marks = Marks;
+
+    public Students(String name, String regNO, String course, int marks){
+        CalcGrade calcGrade = new CalcGrade(marks);
+        this.name = name;
+        this.regNO = regNO;
+        this.course = course;
+        this.marks = marks;
+        this.grade = calcGrade.grade;
+
     }
+
+
 
 }
